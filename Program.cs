@@ -63,9 +63,9 @@ interface CliTodoApp
         
         public void ShowTask()
         {
-            string format = "{0,-5} | {1,-25} | {2,-15}";
+            string format = "{0,-5} | {1,-50} | {2,-15}";
             Console.WriteLine(string.Format(format, "No", "Name", "Status"));
-            Console.WriteLine(new string('-', 50));
+            Console.WriteLine(new string('-', 80));
 
             foreach (var task in tasks)
             {
@@ -103,7 +103,7 @@ interface CliTodoApp
                 Console.WriteLine("Use [E]xit [L]ist [A]dd [R]emove [S]ave [C]hange");
                 Console.Write(">> ");
                 string choice = Console.ReadLine();
-                
+                Console.Clear();
                 switch (choice.ToLower())
                 {
                     case "a":
@@ -186,6 +186,7 @@ interface CliTodoApp
                         Console.WriteLine("Command not found.");
                         break;
                 }
+                Console.WriteLine();
             }
         }
     }
