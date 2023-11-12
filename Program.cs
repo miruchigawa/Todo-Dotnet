@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-interface CliTodoApp
+namespace CliTodoApp
 {
     
     public class TaskItem
